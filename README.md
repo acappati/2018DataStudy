@@ -17,7 +17,7 @@
    -   python ExtractHistos.py             to store data into histo for each lumi block (needs some time)
    -   python FitDATA.py
    -   python FitMC.py
-   -   python DataVsLumi_modified.py       to plot Data vs Lumi
+   -   python DataVsLumi.py                to plot Data vs Lumi
 
 
 Then you can use:
