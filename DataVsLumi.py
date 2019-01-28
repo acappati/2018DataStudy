@@ -3,7 +3,7 @@
 
 # *******************
 # usage: 
-#    python DATAVsLumi_modified.py (DATAVsLumi.py original verion from Toni)
+#    python DATAVsLumi.py 
 #
 # structure:
 #    - read file with data histo divided per lumiblocks (created by ExtractHistos.py)
