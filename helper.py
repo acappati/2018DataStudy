@@ -420,20 +420,20 @@ def SAME3VsLumi(g1, g2, g3, title, ptype, lineMC1, lineDATA1, lineMC2, lineDATA2
         textLetters.SetTextColor(kGray+1)
         textLetters.SetTextSize(0.03)
         if(ptype == "Zmass"):
-            textLetters.DrawLatex(2.,  gPad.GetUymin() + 0.6,"Av1")
-            textLetters.DrawLatex(9.5, gPad.GetUymin() + 0.6,"Av2")
-            textLetters.DrawLatex(12.5, gPad.GetUymin()+ 0.6,"Av3")
-            textLetters.DrawLatex(15., gPad.GetUymin() + 0.6,"Bv1")
+            textLetters.DrawLatex(6.,  gPad.GetUymin() + 0.6,"A")
+            textLetters.DrawLatex(16., gPad.GetUymin() + 0.6,"B")
+            textLetters.DrawLatex(23., gPad.GetUymin() + 0.6,"C")
+            textLetters.DrawLatex(43., gPad.GetUymin() + 0.6,"D")
         elif(ptype == "Zwidth"):
-            textLetters.DrawLatex(2.,  gPad.GetUymin() +0.3,"Av1")
-            textLetters.DrawLatex(9.5, gPad.GetUymin() +0.3,"Av2")
-            textLetters.DrawLatex(12.5, gPad.GetUymin()+0.3,"Av3")
-            textLetters.DrawLatex(15., gPad.GetUymin() +0.3,"Bv1")
+            textLetters.DrawLatex(6.,  gPad.GetUymin() +0.3,"A")
+            textLetters.DrawLatex(16., gPad.GetUymin() +0.3,"B")
+            textLetters.DrawLatex(23., gPad.GetUymin() +0.3,"C")
+            textLetters.DrawLatex(43., gPad.GetUymin() +0.3,"D")
         elif(ptype == "Zmult") :
-            textLetters.DrawLatex(2.,  260000,"Av1")
-            textLetters.DrawLatex(9.5, 260000,"Av2")
-            textLetters.DrawLatex(12.5, 260000,"Av3")
-            textLetters.DrawLatex(15., 260000,"Bv1")
+            textLetters.DrawLatex(6.,  260000,"A")
+            textLetters.DrawLatex(16., 260000,"B")
+            textLetters.DrawLatex(23., 260000,"C")
+            textLetters.DrawLatex(43., 260000,"D")
 
     
     # ****
@@ -442,20 +442,20 @@ def SAME3VsLumi(g1, g2, g3, title, ptype, lineMC1, lineDATA1, lineMC2, lineDATA2
         down    = gPad.GetUymin()
         up      = gPad.GetUymax()
         
-        lineAv1 = TLine(7.643, down, 7.643, up) # Run2018Av1 up to 7.643 fb-1
-        lineAv1.SetLineColor(kBlack)
-        lineAv1.SetLineStyle(2)
-        lineAv1.Draw()    
+        lineA = TLine(13.48, down, 13.48, up) # Run2018A up to 13.48 fb-1
+        lineA.SetLineColor(kBlack)
+        lineA.SetLineStyle(2)
+        lineA.Draw()    
         
-        lineAv2 = TLine(12.441, down, 12.441, up) # Run2018Av2 up to 12.441 fb-1
-        lineAv2.SetLineColor(kBlack)
-        lineAv2.SetLineStyle(2)
-        lineAv2.Draw()
+        lineB = TLine(20.265, down, 20.265, up) # Run2018B up to 20.265 fb-1
+        lineB.SetLineColor(kBlack)
+        lineB.SetLineStyle(2)
+        lineB.Draw()
         
-        lineAv3 = TLine(12.863, down, 12.863, up) # Run2018Av3 up to 12.863 fb-1
-        lineAv3.SetLineColor(kBlack)
-        lineAv3.SetLineStyle(2)
-        lineAv3.Draw()
+        lineC = TLine(26.877, down, 26.877, up) # Run2018C up to 26.877 fb-1
+        lineC.SetLineColor(kBlack)
+        lineC.SetLineStyle(2)
+        lineC.Draw()
         
 
     if(dataPeriod == "data2017"):
@@ -630,15 +630,15 @@ def SAME2VsLumi(g1, g2,title, ptype, dataPeriod):
         textLetters.SetTextColor(kGray+1)
         textLetters.SetTextSize(0.03)
         if(ptype == "ISO"):
-            textLetters.DrawLatex(2.,  0.8*gPad.GetUymax(),"Av1")
-            textLetters.DrawLatex(9.5, 0.8*gPad.GetUymax(),"Av2")
-            textLetters.DrawLatex(12.5, 0.8*gPad.GetUymax(),"Av3")
-            textLetters.DrawLatex(15., 0.8*gPad.GetUymax(),"Bv1")
+            textLetters.DrawLatex(6.,   0.8*gPad.GetUymax(), "A")
+            textLetters.DrawLatex(16.,  0.8*gPad.GetUymax(), "B")
+            textLetters.DrawLatex(23.,  0.8*gPad.GetUymax(), "C")
+            textLetters.DrawLatex(43.,  0.8*gPad.GetUymax(), "D")
         elif(ptype == "SIP"):
-            textLetters.DrawLatex(2.,  1.5,"Av1")    
-            textLetters.DrawLatex(9.5, 1.5,"Av2")
-            textLetters.DrawLatex(12.5, 1.5,"Av3")
-            textLetters.DrawLatex(15., 1.5,"Bv1")
+            textLetters.DrawLatex(6.,  1.5, "A")    
+            textLetters.DrawLatex(16., 1.5, "B")
+            textLetters.DrawLatex(23., 1.5, "C")
+            textLetters.DrawLatex(43., 1.5, "D")
          
 
 
@@ -648,20 +648,20 @@ def SAME2VsLumi(g1, g2,title, ptype, dataPeriod):
         down    = gPad.GetUymin()
         up      = gPad.GetUymax()
         
-        lineAv1 = TLine(7.643, down, 7.643, up) # Run2018Av1 up to 7.643 fb-1
-        lineAv1.SetLineColor(kBlack)
-        lineAv1.SetLineStyle(2)
-        lineAv1.Draw()
+        lineA = TLine(13.48, down, 13.48, up) # Run2018A up to 13.48 fb-1
+        lineA.SetLineColor(kBlack)
+        lineA.SetLineStyle(2)
+        lineA.Draw()
         
-        lineAv2 = TLine(12.441, down, 12.441, up) # Run2018Av2 up to 12.441 fb-1
-        lineAv2.SetLineColor(kBlack)
-        lineAv2.SetLineStyle(2)
-        lineAv2.Draw()
+        lineB = TLine(20.265, down, 20.265, up) # Run2018B up to 20.265 fb-1
+        lineB.SetLineColor(kBlack)
+        lineB.SetLineStyle(2)
+        lineB.Draw()
         
-        lineAv3 = TLine(12.863, down, 12.863, up) # Run2018Av3 up to 12.863 fb-1
-        lineAv3.SetLineColor(kBlack)
-        lineAv3.SetLineStyle(2)
-        lineAv3.Draw()
+        lineC = TLine(26.877, down, 26.877, up) # Run2018C up to 26.877 fb-1
+        lineC.SetLineColor(kBlack)
+        lineC.SetLineStyle(2)
+        lineC.Draw()
         
     # ****
     if(dataPeriod == "data2017"):

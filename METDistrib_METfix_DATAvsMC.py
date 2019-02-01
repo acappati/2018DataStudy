@@ -31,7 +31,8 @@ ZTree     = True
 
 # data periods options
 #period = "data2017_preMETfix"
-period = "data2017_withMETfix"
+#period = "data2017_withMETfix"
+period = "data2018"
 # *****************************
 
 
@@ -70,6 +71,35 @@ elif(period == "data2017_withMETfix"):
     inputMCTTbartree = TFile.Open("/afs/cern.ch/user/a/acappati/work/H4l/181207_data2017METcorr_Condor/CMSSW_9_4_9/src/ZZAnalysis/AnalysisStep/test/prod/PROD_samples_2017_MC_METfix_549ab78/AAAOK/TTTo2L2Nu/ZZ4lAnalysis.root")      #TTbarJets 2017 MC
     lumi     = 41.30   # fb-1
     lumiText = '41.30 fb^{-1}'
+    if(ZZTree):
+        treeDATA    = inputDATAtree.Get("ZZTree/candTree")
+        treeMCDY    = inputMCDYtree.Get("ZZTree/candTree")
+        treeMCTTbar = inputMCTTbartree.Get("ZZTree/candTree")
+        treeText  = "ZZTree"
+    elif(CRZLLTree):
+        treeDATA    = inputDATAtree.Get("CRZLLTree/candTree")
+        treeMCDY    = inputMCDYtree.Get("CRZLLTree/candTree")
+        treeMCTTbar = inputMCTTbartree.Get("CRZLLTree/candTree")
+        treeText  = "CRZLLTree"
+    elif(CRZLTree):
+        treeDATA    = inputDATAtree.Get("CRZLTree/candTree")
+        treeMCDY    = inputMCDYtree.Get("CRZLTree/candTree")
+        treeMCTTbar = inputMCTTbartree.Get("CRZLTree/candTree")
+        treeText  = "CRZLTree"
+    elif(ZTree):
+        treeDATA    = inputDATAtree.Get("ZTree/candTree")
+        treeMCDY    = inputMCDYtree.Get("ZTree/candTree")
+        treeMCTTbar = inputMCTTbartree.Get("ZTree/candTree")
+        treeText  = "ZTree"
+    else:
+        print ("Error: wrong option!")
+
+elif(period == "data2018"):
+    inputDATAtree    = TFile.Open("../ZZ4lAnalysis.root")        #2018 data    
+    inputMCDYtree    = TFile.Open("/data3/Higgs/190128/DYJetsToLL_M50/ZZ4lAnalysis.root") #DYJets 2018 MC 
+    inputMCTTbartree = TFile.Open("/data3/Higgs/190128/TTTo2L2Nu/ZZ4lAnalysis.root")      #TTbarJets 2018 MC
+    lumi     = 58.83   # fb-1
+    lumiText = '58.83 fb^{-1}'
     if(ZZTree):
         treeDATA    = inputDATAtree.Get("ZZTree/candTree")
         treeMCDY    = inputMCDYtree.Get("ZZTree/candTree")

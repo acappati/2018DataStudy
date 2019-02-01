@@ -37,8 +37,8 @@ period = "data2018"
 
 #input file
 if(period == "data2018"):
-    data = TFile.Open("/data3/Higgs/180629_2018Data/AllData/ZZ4lAnalysis.root") #2017 data
-    lumi = 16.6   # fb-1
+    data = TFile.Open("../ZZ4lAnalysis.root") 
+    lumi = 58.83   # fb-1
     if(ZZTree):
         tree      = data.Get("ZZTree/candTree")
         treeText  = "ZZTree"

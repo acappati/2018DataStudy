@@ -34,7 +34,7 @@ if(period == "data2016"):
 elif(period == "data2017"):
     lumi = 41.30    # fb-1
 elif(period == "data2018"):
-    lumi = 16.6     # fb-1
+    lumi = 58.83     # fb-1
 
 
 #input file (DY MC)
@@ -53,7 +53,7 @@ if(period == "data2017"):
         print ("Error: wrong option!")
 
 elif(period == "data2018"):
-    inputTree = TFile.Open("/data3/Higgs/180416/MC_main/DYJetsToLL_M50/ZZ4lAnalysis.root") #DYJets 2017 MC
+    inputTree = TFile.Open("/data3/Higgs/190128/DYJetsToLL_M50/ZZ4lAnalysis.root") #DYJets 2018 MC
     if(ZZTree):
         tree      = inputTree.Get("ZZTree/candTree")
         treeText  = "ZZTree"

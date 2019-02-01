@@ -28,7 +28,7 @@ period = "data2018"
 
 
 if(period == "data2018"):
-    data     = TFile.Open("/data3/Higgs/180629_2018Data/AllData/ZZ4lAnalysis.root")
+    data     = TFile.Open("../ZZ4lAnalysis.root")
     inputTXT = "JSON_calc/SplittedBlocks_2018data_0p5_new.txt"
     saveAs   = "2018data_0p5_reduced"
 
@@ -150,11 +150,12 @@ print "Splitting data into lumi blocks."
 tree.SetBranchStatus("*",0)  # disable all branches
 if ZTree :
     tree.SetBranchStatus("Zsel",1)
+    tree.SetBranchStatus("ZMass",1)
 else : 
     tree.SetBranchStatus("ZZsel",1)
+    tree.SetBranchStatus("Z1Mass",1)
 tree.SetBranchStatus("RunNumber",1)
 tree.SetBranchStatus("LepLepId",1)
-tree.SetBranchStatus("ZMass",1)
 tree.SetBranchStatus("LepEta",1)
 tree.SetBranchStatus("LepCombRelIsoPF",1)
 tree.SetBranchStatus("LepSIP",1)

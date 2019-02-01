@@ -62,8 +62,8 @@ elif(period == "data2017"):
         print ("Error: wrong option!")
 
 elif(period == "data2018"):
-    data = TFile.Open("/data3/Higgs/180629_2018Data/AllData/ZZ4lAnalysis.root") #2018 data
-    lumi = 16.6   # fb-1
+    data = TFile.Open("../ZZ4lAnalysis.root") #2018 data
+    lumi = 58.83   # fb-1
     if(ZZTree):
         tree      = data.Get("ZZTree/candTree")
         treeText  = "ZZTree"

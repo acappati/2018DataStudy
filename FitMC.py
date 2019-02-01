@@ -41,20 +41,20 @@ MCsample = "DYJets"
 
 
 if(period == "data2018"):
-    lumi = 16.6     # fb-1
+    lumi = 58.83     # fb-1
 
 #input file
 if(MCsample == "DYJets"):
-    inputTree = TFile.Open("/data3/Higgs/180416/MC_main/DYJetsToLL_M50/ZZ4lAnalysis.root") #DYJets
+    inputTree = TFile.Open("/data3/Higgs/190128/DYJetsToLL_M50/ZZ4lAnalysis.root") #DYJets
 elif(MCsample == "TTJets"):
-    inputTree = TFile.Open("/data3/Higgs/180416/MC_main/TTTo2L2Nu/ZZ4lAnalysis.root")  #TTJets 
+    inputTree = TFile.Open("/data3/Higgs/190128/TTTo2L2Nu/ZZ4lAnalysis.root")  #TTJets 
 else:
     print ("Error: wrong MC sample!")
 
 
 #PU weights
 if(applyPU2018):
-    fPU = TFile.Open("../../data/PileUpWeights/puWeights_Fall2017MC_to_2018Data_314472-317591.root");
+    fPU = TFile.Open("../../data/PileUpWeights/pu_weights_2018.root");
     hPUWeight= fPU.Get("weights")
 
 
