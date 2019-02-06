@@ -47,9 +47,9 @@ To compare LepBDT DATA/MC distributions:
    -   python LepBDTdistrib_DATAvsMC.py 
 
 
-To compare jet MET DATA/MC distributions:
+To compare jet DATA/MC distributions:
 
-   -   python jetsMetDistrib_DATAvsMC.py
+   -   python jetsDistrib_DATAvsMC.py
 
 
 To compare Lepton pT eta phi DATA/MC distributions:
