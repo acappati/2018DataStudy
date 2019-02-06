@@ -1427,17 +1427,24 @@ for i in range(len(inDATA_list)) :
 
     hs = THStack("hs","")
 
+
+    # norm = 1 # normalize to MC xsection 
+    norm = inDATA_list[i].Integral() / (inMCTTbar_list[i].Integral() + inMCDY_list[i].Integral()) #normalize MC to data
+
+
     #DATA hist
     inDATA_list[i].SetMarkerStyle(20)
     inDATA_list[i].SetMarkerSize(0.6)
 
 
     #MC TTbar hist
+    inMCTTbar_list[i].Scale(norm) #normalize MC 
     inMCTTbar_list[i].SetFillColor(kAzure-2)
     inMCTTbar_list[i].SetLineColor(kBlack)
     hs.Add(inMCTTbar_list[i])
 
     #MC DY hist
+    inMCDY_list[i].Scale(norm) #normalize MC 
     inMCDY_list[i].SetFillColor(kOrange-3)
     inMCDY_list[i].SetLineColor(kBlack)
     hs.Add(inMCDY_list[i])
