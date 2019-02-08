@@ -5,7 +5,14 @@
 ---
 
 -  enter in JSONCalc/ directory and set 
-       export PATH=$HOME/.local/bin:/afs/cern.ch/cms/lumi/brilconda-1.1.7/bin:$PATH
+   ```
+   export PATH=$HOME/.local/bin:/afs/cern.ch/cms/lumi/brilconda-1.1.7/bin:$PATH
+   ```
+
+   If you never used brilcalc you should also do:
+   ```
+   pip install --install-option="--prefix=$HOME/.local" brilws
+   ```
 
 -  then run the scripts:
 
