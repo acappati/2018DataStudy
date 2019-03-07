@@ -34,7 +34,7 @@ ZTree    = True
 # period = "data2016"
 period = "data2018"
 # *****************************
-lumiText = '58.83 fb^{-1}'
+lumiText = '59.61 fb^{-1}'  #full 2018 data
 #******************************
 
 
